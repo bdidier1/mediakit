@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clip2EP</title>
+  <!-- La fiche d'un parc s'ouvre désormais dans le panneau du parc 3D : on y redirige les anciens liens. -->
+  <script>
+    (function () {
+      var park = new URLSearchParams(window.location.search).get('park');
+      window.location.replace('index.html#videos' + (park ? '/' + encodeURIComponent(park) : ''));
+    })();
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=index.html#videos"></noscript>
+</head>
+<body>
+  <p><a href="index.html#videos">Clip2EP</a></p>
+</body>
+</html>
